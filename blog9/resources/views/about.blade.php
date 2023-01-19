@@ -3,7 +3,7 @@
     <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
         <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
             <h1 style="color:rgb(239, 59, 45)">About Page</h1>
-            <a href="/">Home</a> |<a href="/about">About</a> | <a href="/contact">contact</a>
+            <a href="{{ URL:: to('/')}}">Home</a> |<a href="{{URL::to('/about')}}">About</a> | <a href="{{URL::to('/contact')}}">contact</a>
         </div>
     </div>
 </div>
