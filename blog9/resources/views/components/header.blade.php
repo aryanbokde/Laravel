@@ -11,3 +11,6 @@
     <title>{{$title}}</title>
   </head>
   <body>
+    <div class="container">
+      <H1>Header</H1>
+    </div>
