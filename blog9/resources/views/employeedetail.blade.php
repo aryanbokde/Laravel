@@ -11,6 +11,8 @@
     </ul>
 </div>
 
+
+
 <h2>Salary Detail</h2>
 <div class="container">
     <div class="empSalary">
