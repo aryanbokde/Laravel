@@ -8,7 +8,7 @@ class StoreController extends Controller
 {
     //
     public function dummy(Request $req) {            
-        $data = $req->input('name');
+        $data = $req->input('name');        
         $req->session()->flash('name', $data);
         return redirect('store');
     }

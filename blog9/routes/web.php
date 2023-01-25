@@ -9,8 +9,9 @@ use Illuminate\Support\Facades\Route;
 // use App\Http\Controllers\StoreController;
 use App\Http\Controllers\UserAuth;
 use App\Http\Controllers\UploadController;
-
-
+use App\Http\Controllers\FlightController;
+use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\SalaryController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -64,12 +65,33 @@ Route::post('/upload', [UploadController::class, 'uploadPhoto']);
 
 Route::get('/member', [MemberController::class, 'show']);
 
+Route::view('/addmember', 'addmember');
+Route::post('/addmember', [MemberController::class, 'addMember']);
+
+Route::get('/deletemember/{id}', [MemberController::class, 'deletemember']);
+
+Route::get('/edit/{id}', [MemberController::class, 'showMemberDetail']);
+Route::post('/edit', [MemberController::class, 'updateMember']);
+
+// Flight CRUD opration
+
+Route::get('/flights', [FlightController::class, "showFlight"]);
+
+Route::get('/editflight/{id}', [FlightController::class, "editFlight"]);
+Route::post('/editflights', [FlightController::class, "updateFlight"]);
+
+Route::view('/addflight', 'addflight');
+Route::post('/addflight', [FlightController::class, 'addNewFlight']);
+
+Route::get('/delflight/{id}', [FlightController::class, 'deleteFlight']);
 
 
+//Employee 
+Route::get('/employee', [ EmployeeController::class, 'showEmployee']);
+Route::get('/addsalary', [SalaryController::class, 'getAllList']);
+Route::post('/addsalary', [SalaryController::class, 'addSalary']);
 
-
-
-
+Route::get('/employee/detail/{id}', [EmployeeController::class, 'employeeDetail']);
 
 
 
