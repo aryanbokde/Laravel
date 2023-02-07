@@ -1,12 +1,15 @@
 <h2>Employee Detail</h2>
 
+
+
+
 <div class="container">
     <ul class="empDetail">
         <li><p><strong>Name : </strong> {{$data['empData']->name}}</P></li>
         <li><p><strong>Last Name : </strong> {{$data['empData']->lname}}</P></li>
         <li><p><strong>Email : </strong> {{$data['empData']->email}}</P></li>
         <li><p><strong>Designation : </strong> {{$data['empData']->designation}}</P></li>
-        <li><p><strong>Salary : </strong> {{$data['empData']->salary}}</P></li>
+        <li><p><strong>Salary : </strong> {{ $data['lastSalary'] }}</P></li>
         <li><p><strong>DOJ : </strong> {{$data['empData']->DOJ}}</P></li>
     </ul>
 </div>

@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\DB;
 class SalaryController extends Controller
 {
     public function getAllList() {
+        
+        // return $titles = DB::table('employees')->pluck('name');
         $data =  DB::table('employees')->get();
         return view("addsalary", ['data' => $data]);
     }

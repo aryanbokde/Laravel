@@ -4,30 +4,34 @@
     <tr>
       <th>Id</th>
       <th>Name</th>
-      <th>Last Name</th>
       <th>Email</th>
       <th>Designation</th>
       <th>salary</th>
       <th>DOJ</th>
     </tr>
-    @foreach ($data as $item)
-    <tr>
-      <td>{{$item->id}}</td>
-      <td><a href="/employee/detail/{{$item->id}}">{{$item->name}}</a></td>
-      <td>{{$item->lname}}</td>
-      <td>{{$item->email}}</td>
-      <td>{{$item->designation}}</td>
-      <td>{{$item->salary}}</td>
-      <td>{{$item->DOJ}}</td>
-    </tr>
-    @endforeach
+    @for ($i=0; $i < count($data); $i++)       
+      <tr>
+        <td>{{$data[$i]['id']}}</td>
+        <td><a href="/employee/detail/{{$data[$i]['id']}}">{{$data[$i]['name']}}</a></td>       
+        <td>{{$data[$i]['email']}}</td>
+        <td>{{$data[$i]['designation']}}</td>
+        <td>{{$data[$i]['salary']}}</td>
+        <td>{{$data[$i]['DOJ']}}</td>
+      </tr>
+    @endfor
+    
+   
     
 </table>
 <div>
     {{-- {{$data->links()}} --}}
 </div>
 
+<?php 
+  
+  
 
+?>
 <style>
     table {
       font-family: arial, sans-serif;
